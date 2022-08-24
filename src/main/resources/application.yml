@@ -1,7 +1,7 @@
 spring:
   datasource:
     driverClassName: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/customer
+    url: jdbc:mysql://localhost:3306/product
     username: root
     password: root
   jpa:
@@ -11,3 +11,11 @@ spring:
 
 server:
   port: 9092
+
+eureka:
+  client:
+    register-with-eureka: ture
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+  instance: localhost
